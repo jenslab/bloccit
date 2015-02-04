@@ -1,8 +1,6 @@
 @import "bootstrap";
 
-button.social-btn {
- position: relative;
-  width: 100px;
-  height: 30px;
-  background: #ffffff;
- }
+//= require_self
+//= require_tree .
+
+
