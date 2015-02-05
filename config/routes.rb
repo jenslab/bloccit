@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
-  get 'welcome/contact'
+ 
+resources :posts
 
-  get "welcome/index"
+get 'about' => 'welcome#about'
 
-  get "welcome/about"
-
-  get "welcome/contact"
-
-  root to: 'welcome#index'
+root to: 'welcome#index'
 end
