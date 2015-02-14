@@ -40,11 +40,11 @@ class TopicsController < ApplicationController
       flash[:error] = "Error saving topic. Please try again."
       render :edit
     end
+  end
 
     private
 
     def topic_params
       params.require(:topic).permit(:name, :description, :public)
     end
-  end
 end
