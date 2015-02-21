@@ -17,3 +17,15 @@
     <% end %>
   </div>
 </div>
+
+ </div>
+   <div class="col-md-8">
+<%= render partial: 'comments/form', locals: { topic: @topic, post: @post } %>
+   </div>
+ </div>
+
+    <div class="col-md-8">
+<%= render partial: 'comments/comment', locals: { topic: @topic, post: @post } %>
+   </div>
+ </div>
+
