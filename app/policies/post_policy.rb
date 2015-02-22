@@ -13,4 +13,8 @@ class Scope < Scope
     def index?
       user.admin? || user.moderator?
     end
+
+    def destroy?
+      user.present? && (record.user == user || user.admin? || user.moderator?)
+    end
 end
