@@ -10,10 +10,10 @@
 
     if @comment.save
       flash[:notice] = "Comment was saved!"
-      redirect_to @post
+      redirect_to [@post.topic, @post]
     else
       flash[:error] = "Ooops, couldn't save your comment. Please try again."
-      redirect_to @post
+      redirect_to [@post.topic, @post]
     end
    end
 
