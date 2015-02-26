@@ -22,6 +22,8 @@
      </small>
    </div>
 
+   <p><%= render partial: 'favorites/favorite', locals: { post: @post } %></p>
+
   <div class="col-md-4">
     <% if policy(@post).edit? %>
       <%= link_to "Edit", edit_topic_post_path(@topic, @post), class: 'btn-sm btn-success' %>
