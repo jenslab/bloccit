@@ -2,13 +2,14 @@ class PostsController < ApplicationController
 
   def index
     @posts = policy_scope(Post)
-  authorize @posts
+    authorize @posts
   end
 
   def show
     @topic = Topic.find(params[:topic_id])
     @post = Post.find(params[:id])
     @comments = @post.comments.all
+    authorize @topic
     authorize @post
   end
 
