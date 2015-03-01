@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 describe Topic do
+
    describe "scopes" do
  
      before do 
@@ -22,7 +23,7 @@ describe Topic do
  
      describe "visible_to(user)" do
        it "returns all topics if the user is present" do
-         user = true # sneaky solution; we don't need a real user, just something truthy
+         user = true
          expect(Topic.visible_to(user)).to eq(Topic.all)
      end
  
